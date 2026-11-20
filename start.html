@@ -6,6 +6,19 @@
     <title>Start</title>
 </head>
 <body>
-    
+    <h2>Choose a quiz</h2>
+    <form action="/" method = "post">
+        <!-- Pilihan quiz -->
+         <select name = "quiz">
+            {% for id, name in quiz_list %}  <!-- Jinja Feature -->
+            <option value="{{id}}">{{name}}</option>></option>
+            {% endfor %}
+         </select>
+        <!--  Tombol submit -->
+         <p>
+            <input type = "submit" value = "Start">
+         </p>
+
+    </form>
 </body>
 </html>

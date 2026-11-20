@@ -6,6 +6,29 @@
     <title>Test</title>
 </head>
 <body>
-    
+    <!-- QUESTION START -->
+    {% if question %}
+    <h1>{{ question }}</h1>
+    {% endif %}
+    <!-- QUESTION END -->
+    <!-- OPTION START -->
+    <form action = "test" method = "post">
+        <!--  simpan id question, tapi jangan tampilkan -->
+        <input type = "hidden" name="q_id" value="{{ quest_id }}">
+        <div>
+            <!-- multiple choice -->
+             {% for answer in answers_list%}
+            <div>
+                <input type="radio" name="ans_text" value="{{ answer }}">{{ answer }}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Tombol -->
+        <div>
+            <input type ="submit" value="Submit">
+        </div>
+    </form>
+    <!-- OPTION END -->
 </body>
 </html>
