@@ -61,11 +61,11 @@ def save_answers():
     session['total'] += 1
 
     if check_answer(quest_id, answer):
-        session['answer'] += 1
+        session['answers'] += 1
 
 def test():
-    if not('quiz' in session) or int(session['quiz'] < 0):
-        return redirect(url_for('result'))
+    if not('quiz' in session) or int(session['quiz']) < 0:
+        return redirect(url_for('index'))
     else:
         if request.method == 'POST':
             save_answers()
@@ -78,7 +78,7 @@ def test():
 # === TEST UTILITY END - TEST PAGE ===
 
 def result():
-    html = render_template('result.html', right=session['answer'], total=session['total'])
+    html = render_template('result.html', right=session['answers'], total=session['total'])
     end_quiz()
     return html
 

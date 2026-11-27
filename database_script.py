@@ -82,8 +82,8 @@ def add_questions():
     
     ("Who wrote Pride and Prejudice?", "Jane Austen", "Charlotte Brontë", "Mary Shelley", "George Eliot"),
     ("In 1984, what is the ruling leader figure called?", "Big Brother", "The Directorate", "The Overlords", "Supreme Council"),
-    ("What is the captain's name in Moby-Dick?", "Captain Ahab", "Captain Bligh", "Captain Hook", "Captain Nemo"),
-    ("Which play features \"To be, or not to be\"?", "Hamlet", "Macbeth", "Romeo and Juliet", "Othello"),
+    ("Which play features To be, or not to be", "Hamlet", "Macbeth", "Romeo and Juliet", "Othello"),
+    ("What is the captain's name in Moby-Dick?", "Captain Ahab", "Captain Bligh", "Captain Hook", "Captain Nemo")
   ]
 
   open()
@@ -209,9 +209,9 @@ def main():
   add_quiz()
   add_links()
   # get_questions_after(question_id = 0, quiz_id = 1)
-  print(get_question_after(1,1))
-  print(get_question_after(9,3))
-  print(get_question_after(11,3))
+  # print(get_question_after(1,1))
+  # print(get_question_after(9,3))
+  # print(get_question_after(11,3))
 
 if __name__ == "__main__":
   main()
