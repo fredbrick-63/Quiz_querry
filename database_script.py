@@ -188,7 +188,7 @@ def check_answer(q_id, ans_text):
     AND quiz_content.question_id = questions.id
   '''
   open()
-  cursor.execute(query, str(q_id))
+  cursor.execute(query, (q_id, ))
   result = cursor.fetchone()
   close()
 
